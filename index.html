@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brixo Designs — Modern Web Design Studio crafting high-converting websites for local businesses. Fast, simple, and effective digital solutions.">
+    <title>Brixo Designs | Premium Web Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo.png" alt="Brixo Designs Logo">
+            <span>Brixo <small class="brand-sub">Designs</small></span>
+        </a>
+        <div class="mobile-menu-btn" id="menuBtn">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Home</a>
+            <a href="#work">Work</a>
+            <a href="#process">Process</a>
+            <a href="#pricing">Pricing</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="nav-cta">Get a Quote</a>
+            <a href="index-el.html" class="lang-switch">ΕΛ</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <!-- LEFT: TEXT -->
+            <div class="hero-content reveal">
+                <div class="badge"><i class="fas fa-bolt"></i> Websites for Local Businesses</div>
+                <h1>Simple websites that bring you customers for <br><span class="gradient-text typewriter-wrap"><span id="typewriter">Barbershops</span><span class="cursor">|</span></span></h1>
+                <p class="hero-sub">We build simple, fast, and affordable websites for local businesses. Stop losing customers to competitors just because they show up on Google and you don't.</p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary"><i class="fas fa-eye"></i> See Our Work</a>
+                    <a href="#pricing" class="btn btn-secondary"><i class="fas fa-tag"></i> See Prices</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item"><i class="fas fa-check-circle"></i> Mobile-Friendly</div>
+                    <div class="trust-item"><i class="fas fa-check-circle"></i> Local SEO Included</div>
+                    <div class="trust-item"><i class="fas fa-check-circle"></i> Live in Days, Not Months</div>
+                </div>
+            </div>
+
+            <!-- RIGHT: 3D MOCKUPS -->
+            <div class="hero-mockups reveal" style="transition-delay:200ms">
+                <div class="mockup-stage">
+                    <div class="mockup-card mockup-back">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <img src="assets/electrician.png" alt="Electrician Demo Website">
+                    </div>
+                    <div class="mockup-card mockup-mid">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <img src="assets/barbershop.png" alt="Barbershop Demo Website">
+                    </div>
+                    <div class="mockup-card mockup-front">
+                        <div class="mockup-browser-bar">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <img src="assets/coffeehouse.png" alt="Coffeehouse Demo Website">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+
+
+    <!-- INDUSTRIES SERVED -->
+    <section class="industries-section">
+        <div class="section-header reveal">
+            <p class="section-label">Who We Build For</p>
+            <h2>Modern Websites for Every Industry</h2>
+        </div>
+        <div class="industries-grid reveal">
+            <div class="industry-pill"><i class="fas fa-cut"></i> Barbershops</div>
+            <div class="industry-pill"><i class="fas fa-coffee"></i> Coffee Shops</div>
+            <div class="industry-pill"><i class="fas fa-bolt"></i> Electricians</div>
+            <div class="industry-pill"><i class="fas fa-utensils"></i> Restaurants</div>
+            <div class="industry-pill"><i class="fas fa-dumbbell"></i> Gyms & Fitness</div>
+            <div class="industry-pill"><i class="fas fa-store"></i> Retail Stores</div>
+            <div class="industry-pill"><i class="fas fa-wrench"></i> Technicians</div>
+            <div class="industry-pill"><i class="fas fa-spa"></i> Beauty & Wellness</div>
+        </div>
+    </section>
+
+    <!-- WORK / PORTFOLIO -->
+    <section id="work" class="portfolio-section">
+        <div class="section-header reveal">
+            <p class="section-label">Featured Work</p>
+            <h2>Real Projects. Real Results.</h2>
+            <p class="section-sub">Each project is a custom-built, pixel-perfect website designed to convert visitors into customers.</p>
+        </div>
+        <div class="portfolio-grid">
+
+            <div class="port-card reveal">
+                <div class="port-card-img">
+                    <img src="assets/barbershop.png" alt="Classic Barber Shop Website">
+                    <div class="port-card-overlay">
+                        <a href="demos/demo-barbershop.html" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="case-studies/barbershop.html" class="overlay-btn overlay-btn-ghost">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="port-card-body">
+                    <div class="port-tags">
+                        <span class="ptag">Local SEO</span><span class="ptag">Fast Loading</span><span class="ptag">Mobile Ready</span>
+                    </div>
+                    <h3>The Gentleman's Cut</h3>
+                    <p>A modern dark-themed barbershop site with dynamic service menus. Designed to make it extremely easy for a customer to request an appointment directly from their phone.</p>
+                    <a href="case-studies/barbershop.html" class="card-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="port-card reveal" style="transition-delay:100ms">
+                <div class="port-card-img">
+                    <img src="assets/coffeehouse.png" alt="Coffee House Website">
+                    <div class="port-card-overlay">
+                        <a href="demos/demo-coffeehouse.html" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="case-studies/coffeehouse.html" class="overlay-btn overlay-btn-ghost">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="port-card-body">
+                    <div class="port-tags">
+                        <span class="ptag">Menu Showcase</span><span class="ptag">Contact Form</span>
+                    </div>
+                    <h3>The Velvet Roast</h3>
+                    <p>A warm, local coffee house website featuring a mobile-friendly digital menu and a fast reservation contact form to capture weekend traffic.</p>
+                    <a href="case-studies/coffeehouse.html" class="card-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="port-card reveal" style="transition-delay:200ms">
+                <div class="port-card-img">
+                    <img src="assets/electrician.png" alt="Electrician Website">
+                    <div class="port-card-overlay">
+                        <a href="demos/demo-electrician.html" target="_blank" class="overlay-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="case-studies/electrician.html" class="overlay-btn overlay-btn-ghost">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="port-card-body">
+                    <div class="port-tags">
+                        <span class="ptag">Lead Gen</span><span class="ptag">Trust Badges</span>
+                    </div>
+                    <h3>VOLTAIC Electricians</h3>
+                    <p>A lead generation site for an electrician service designed specifically to dominate local search terms and encourage immediate quote requests.</p>
+                    <a href="case-studies/electrician.html" class="card-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HOW WE WORK - PROCESS -->
+    <section id="process" class="process-section">
+        <div class="section-header reveal">
+            <p class="section-label">How It Works</p>
+            <h2>A Simple, Fast Process</h2>
+            <p class="section-sub">You're busy running your business. We won't waste your time with endless meetings.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step reveal">
+                <div class="step-num">01</div>
+                <div class="step-icon"><i class="fas fa-comments"></i></div>
+                <h3>Tell us what you need</h3>
+                <p>We chat quickly about your business, your services, and your contact details.</p>
+            </div>
+            <div class="process-arrow reveal"><i class="fas fa-chevron-right"></i></div>
+            <div class="process-step reveal" style="transition-delay:100ms">
+                <div class="step-num">02</div>
+                <div class="step-icon"><i class="fas fa-code"></i></div>
+                <h3>We build the site</h3>
+                <p>We get to work building a fast, professional website tailored to your exact industry.</p>
+            </div>
+            <div class="process-arrow reveal"><i class="fas fa-chevron-right"></i></div>
+            <div class="process-step reveal" style="transition-delay:200ms">
+                <div class="step-num">03</div>
+                <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Start getting customers</h3>
+                <p>Your site goes live, gets indexed by Google, and starts bringing in results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="why-section">
+        <div class="why-inner">
+            <div class="why-left reveal">
+                <p class="section-label">Why Choose Me</p>
+                <h2>Trusted by Local Services</h2>
+                <p class="why-desc">My dad works in the local trades, so I know exactly what local businesses actually need. You don't need expensive corporate agencies — you need an affordable site that brings in customers.</p>
+                <a href="#pricing" class="btn btn-primary" style="margin-top:2rem; display:inline-flex;"><i class="fas fa-tag"></i> View Packages</a>
+            </div>
+            <div class="why-right reveal" style="transition-delay:150ms">
+                <div class="why-card">
+                    <div class="why-icon positive"><i class="fas fa-check"></i></div>
+                    <div><h4>Built to get calls & leads</h4><p>Every site is designed with big, easy-to-click buttons to contact you.</p></div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon positive"><i class="fas fa-check"></i></div>
+                    <div><h4>Helps you rank on Google</h4><p>Fast loading times and right tags to help customers find you searching locally.</p></div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon positive"><i class="fas fa-check"></i></div>
+                    <div><h4>Clear, honest prices</h4><p>Local businesses love clear prices. No hiding, no crazy agency fees.</p></div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon positive"><i class="fas fa-check"></i></div>
+                    <div><h4>Direct communication</h4><p>You talk directly to us. No middle-men, just fast responses.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="testimonials-section">
+        <div class="section-header reveal">
+            <p class="section-label">Real Use Cases</p>
+            <h2>Demo Project Examples</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testi-card reveal">
+                <p class="testi-text">"Before getting a website, local tradesmen rely purely on word-of-mouth. A solid lead-generation site allows you to capture customers searching for 'electrician near me' exactly when they need you most."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"><i class="fas fa-bolt" style="font-size:1rem;"></i></div>
+                    <div>
+                        <strong>Demo Example 1</strong>
+                        <span>Electricians, Plumbers, Techs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card reveal" style="transition-delay:100ms">
+                <p class="testi-text">"Having a professional digital menu and a direct 'Book a Table' form turns casual Instagram browsers into confirmed customers, making it much easier for people to reach you."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"><i class="fas fa-coffee" style="font-size:1rem;"></i></div>
+                    <div>
+                        <strong>Demo Example 2</strong>
+                        <span>Cafes, Restaurants, Bars</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card reveal" style="transition-delay:200ms">
+                <p class="testi-text">"Allowing your customers to see your services and book an appointment online directly from their phone stops them from calling your competitors when you are too busy cutting hair."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"><i class="fas fa-cut" style="font-size:1rem;"></i></div>
+                    <div>
+                        <strong>Demo Example 3</strong>
+                        <span>Barbershops, Salons</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-header reveal">
+            <p class="section-label">Honest Pricing</p>
+            <h2>Simple, Local Packages</h2>
+            <p class="section-sub">No scary agency fees or hidden monthly costs. Just simple pricing for local businesses.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal">
+                <div class="pricing-header">
+                    <p class="pricing-tier">Starter</p>
+                    <div class="pricing-price"><span class="price-val">€250</span></div>
+                    <p class="pricing-desc">Perfect if you just need to turn up on Google and give customers your contact details.</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> 1–3 Page Website</li>
+                    <li><i class="fas fa-check"></i> Mobile Friendly</li>
+                    <li><i class="fas fa-check"></i> Contact Form</li>
+                    <li><i class="fas fa-check"></i> Basic SEO</li>
+                    <li><i class="fas fa-check"></i> 3-Day Delivery</li>
+                </ul>
+                <a href="contact.html" class="btn btn-secondary" style="width:100%; text-align:center;">Get Started</a>
+            </div>
+
+            <div class="pricing-card pricing-featured reveal" style="transition-delay:100ms">
+                <div class="pricing-badge-top">Most Popular</div>
+                <div class="pricing-header">
+                    <p class="pricing-tier">Business</p>
+                    <div class="pricing-price"><span class="price-val">€400</span></div>
+                    <p class="pricing-desc">The sweet spot. Designed to actually capture leads and bring you more calls.</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Up to 5 Pages</li>
+                    <li><i class="fas fa-check"></i> Custom Modern Design</li>
+                    <li><i class="fas fa-check"></i> Advanced Quote Form</li>
+                    <li><i class="fas fa-check"></i> Google Business Setup</li>
+                    <li><i class="fas fa-check"></i> Fast Performance</li>
+                    <li><i class="fas fa-check"></i> 5-Day Delivery</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="width:100%; text-align:center;">Get Started</a>
+            </div>
+
+            <div class="pricing-card reveal" style="transition-delay:200ms">
+                <div class="pricing-header">
+                    <p class="pricing-tier">Professional</p>
+                    <div class="pricing-price"><span class="price-val">€800</span><span class="price-note">+</span></div>
+                    <p class="pricing-desc">Full custom solutions when you need advanced functionality and a standout modern presence.</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                    <li><i class="fas fa-check"></i> High-End Custom Design</li>
+                    <li><i class="fas fa-check"></i> Multi-Step Lead Forms</li>
+                    <li><i class="fas fa-check"></i> Advanced SEO Plan</li>
+                    <li><i class="fas fa-check"></i> Complex Automations</li>
+                    <li><i class="fas fa-check"></i> Priority Delivery</li>
+                </ul>
+                <a href="contact.html" class="btn btn-secondary" style="width:100%; text-align:center;">Let's Talk</a>
+            </div>
+        </div>
+        <p class="pricing-note reveal" style="margin-top:20px; text-align:center; color:var(--text-muted);">
+            Need me to handle everything? <strong>€30/mo</strong> covers hosting, domain renewals, and monthly updates.
+        </p>
+    </section>
+
+    <!-- FINAL CTA BAND -->
+    <section class="cta-band reveal">
+        <div class="cta-band-inner">
+            <div class="badge" style="margin-bottom:15px; border-color:var(--border-hover);"><i class="fas fa-clock"></i> Accepting 3 New Clients This Month</div>
+            <h2>Ready to grow your business online?</h2>
+            <p>Let's build something your customers will actually use. Contact me today for a free chat.</p>
+            <div class="cta-band-actions">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get a Free Quote</a>
+                <a href="https://wa.me/+306938831376" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem;">
+                    <img src="assets/logo.png" alt="Brixo Designs Logo">
+                    <span>Brixo <small class="brand-sub">Designs</small></span>
+                </a>
+                <p>Digital solutions for local businesses worldwide. We build websites that bring real results.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/0x-Shadow" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/+306938831376" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Business Websites</a>
+                <a href="#">E-Commerce Stores</a>
+                <a href="#">Landing Pages</a>
+                <a href="#">UI/UX Design</a>
+                <a href="#">SEO Optimization</a>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="#work">Portfolio</a>
+                <a href="#process">Process</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get In Touch</h4>
+                <a href="mailto:hello@brixodesigns.com"><i class="fas fa-envelope"></i> hello@brixodesigns.com</a>
+                <a href="https://wa.me/+306938831376" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brixo Web Studio. All rights reserved.</p>
+            <p>Built with <i class="fas fa-bolt" style="color:var(--primary);"></i> from Greece</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA -->
+    <a href="contact.html" class="floating-cta" id="floatingCta" title="Get a Free Quote">
+        <i class="fas fa-paper-plane"></i>
+        <span>Free Quote</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Velvet Roast - Coffee House</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --gold: #cca677; --dark: #121415; --darker: #1a1c1d; --text: #e0e0e0; --bg: #212429; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 60px; background-color: var(--darker); border-bottom: 1px solid #111; position: relative; z-index: 100;}
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.1; display:flex; flex-direction:column; align-items: center;}
+        .logo .icon { font-size: 1.2rem; margin-bottom: 2px;}
+        .nav-center { display: flex; align-items: center; gap: 35px; }
+        .nav-links { display: flex; gap: 35px; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links a { color: #fff; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .book-btn { background-color: var(--gold); color: #111; padding: 12px 26px; text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; transition: background 0.3s; }
+        .book-btn:hover { background-color: #e0b888; }
+        .nav-icon { color: var(--gold); margin-right: 15px;}
+        
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 25px; height: 2px; background: var(--gold); transition: 0.3s; }
+
+        /* Hero */
+        .hero { position: relative; height: 50vh; min-height: 400px; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; filter: brightness(0.4) contrast(1.1); }
+        .hero-content { position: relative; z-index: 2; padding: 0 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 4rem); color: #fff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        @media(min-width: 1200px){ h1 { font-size: 4rem; } }
+        p.sub-hero { font-size: 1.1rem; color: #f0f0f0; margin-bottom: 30px; font-weight: 300;}
+        .explore-btn { background-color: var(--gold); color: #111; padding: 14px 34px; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; transition: background 0.3s; display: inline-block; }
+        .explore-btn:hover { background-color: #e0b888; }
+        
+        .divider { text-align: center; margin-top: -30px; position: relative; z-index: 3;}
+        .divider-line { height: 90px; border-left: 1px solid var(--gold); display: inline-block; }
+
+        /* Menu Section */
+        .menu-section { padding: 40px 20px 80px; max-width: 1200px; margin: 0 auto; }
+        .menu-header { text-align: center; margin-bottom: 60px; }
+        .menu-header h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #fff; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;}
+        .menu-header p { font-size: 0.95rem; color: #bbb; font-weight: 300;}
+
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        
+        /* Menu Column */
+        .menu-col h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); text-transform: uppercase; margin-bottom: 35px; letter-spacing: 1px; border-bottom: 1px solid #444; padding-bottom: 15px;}
+        
+        .menu-item { display: flex; justify-content: space-between; margin-bottom: 28px; align-items: baseline;}
+        .item-details { flex: 1; padding-right: 20px; }
+        .item-name { font-size: 0.85rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+        .item-name span { color: var(--gold); font-weight: 600; font-family: 'Playfair Display', serif; font-size: 1rem; margin-left: 5px; text-transform: none;}
+        .item-desc { font-size: 0.75rem; color: #999; line-height: 1.5; font-weight: 400;}
+        .item-price { font-size: 1rem; color: var(--gold); font-weight: 600; font-family: 'Montserrat', sans-serif;}
+
+        /* Images Grid */
+        .img-large { width: 100%; height: 280px; object-fit: cover; border-radius: 4px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);}
+        .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;}
+        .img-item { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);}
+
+        .divider-bottom { text-align: center; margin-bottom: 60px;}
+        .divider-line-bottom { height: 60px; border-left: 1px solid var(--gold); display: inline-block; }
+
+        /* Featured Blends */
+        .featured-section { text-align: center; padding: 0 20px 80px; }
+        .featured-section h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #e0e0e0; text-transform: uppercase; margin-bottom: 50px; letter-spacing: 1px;}
+        .blends-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;}
+        .blend-card { width: 200px; height: 280px; border: 1px solid #444; border-radius: 8px; position:relative; overflow:hidden; background: #1a1c1d; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.3);}
+        .bag-placeholder { width: 80px; height: 140px; background: linear-gradient(135deg, #dfc09c, #cca677); border-radius: 6px 6px 2px 2px; position: relative;}
+        .bag-label { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 40px; height: 50px; background: #fff; border-radius: 2px;}
+        .blend-card::before { content: '◎'; position: absolute; top: 15px; left: 15px; color: #555; }
+        
+        /* Return Bar */
+        .return-bar { position: fixed; bottom: 0; width: 100%; background: #111; border-top: 1px solid #333; text-align: center; padding: 12px; z-index: 1000; display: flex; justify-content: center; align-items: center; gap: 20px; }
+        .return-bar span { color: #888; font-size: 0.85rem; }
+        .return-bar a { color: var(--gold); text-decoration: none; font-weight: 600; border: 1px solid var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; transition: all 0.3s; }
+        .return-bar a:hover { background: var(--gold); color: #111; }
+
+        @media (max-width: 1024px) {
+            .menu-grid { gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 25px; }
+            .nav-icon { display: none; }
+            .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--darker); flex-direction: column; gap: 0; border-bottom: 1px solid #333; display: none; }
+            .nav-links.show { display: flex; }
+            .nav-links a { padding: 15px; text-align: center; border-top: 1px solid #2a2a2a; }
+            .hamburger { display: flex; }
+            .book-btn { display: none; } /* Hide on mobile to save space, or put in nav-links */
+            
+            h1 { font-size: 2.2rem; }
+            .hero { height: 400px; min-height: auto;}
+            
+            .menu-grid { grid-template-columns: 1fr; gap: 60px; }
+            .img-grid { grid-template-columns: 1fr; }
+            .img-item { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <span class="icon">☕</span>
+            THE VELVET<br>ROAST
+        </div>
+        <div class="nav-center">
+            <span class="nav-icon">🍃</span>
+            <div class="nav-links">
+                <a href="#">Our Story</a>
+                <a href="#">Menu</a>
+                <a href="#">Roasts</a>
+                <a href="#">Visits</a>
+                <a href="#">Order Online</a>
+                <a href="#" style="color:var(--gold);">Book A Table</a> <!-- For mobile -->
+            </div>
+        </div>
+        <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </div>
+        <a href="#" class="book-btn">Book A Table</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Crafted in the City.</h1>
+            <p class="sub-hero">Experience artisanal coffee & modern comfort.</p>
+            <a href="#" class="explore-btn">Explore Our Menu</a>
+        </div>
+    </div>
+    
+    <div class="divider">
+        <div class="divider-line"></div>
+    </div>
+
+    <div class="menu-section">
+        <div class="menu-header">
+            <h2>Our Menu</h2>
+            <p>Elegant, organized</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Left Column: Coffee -->
+            <div class="menu-col">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Latte Art" class="img-large">
+                
+                <h3>The Coffee</h3>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Espresso</div>
+                        <div class="item-desc">Rich espresso, velvety milk.</div>
+                    </div>
+                    <div class="item-price">$4.50</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Latte</div>
+                        <div class="item-desc">Rich espresso, velvety milk.</div>
+                    </div>
+                    <div class="item-price">$5.50</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Flat White</div>
+                        <div class="item-desc">Rich espresso, velvety milk, and vitrine.</div>
+                    </div>
+                    <div class="item-price">$5.50</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Cold Brew</div>
+                        <div class="item-desc">Rich espresso, velvety milk, and cold brew.</div>
+                    </div>
+                    <div class="item-price">$6.00</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Mocha</div>
+                        <div class="item-desc">Rich espresso, velvety and cardamom.</div>
+                    </div>
+                    <div class="item-price">$6.00</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Macchiato</div>
+                        <div class="item-desc">Rich espresso, velvety milk.</div>
+                    </div>
+                    <div class="item-price">$6.00</div>
+                </div>
+            </div>
+
+            <!-- Right Column: Bites -->
+            <div class="menu-col">
+                <h3>The Bites</h3>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Almond Pastry <span>- $6.50</span></div>
+                        <div class="item-desc">Flaky croissant, almond cream.</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Pastries <span>- $6.50</span></div>
+                        <div class="item-desc">Flaky croissant, almond cream.</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-details">
+                        <div class="item-name">Brunch Items <span>- $6.50</span></div>
+                        <div class="item-desc">Flaky croissant, fresh items.</div>
+                    </div>
+                </div>
+
+                <div class="img-grid">
+                    <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Avocado Toast" class="img-item">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Croissants" class="img-item">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="divider-bottom">
+        <div class="divider-line-bottom"></div>
+    </div>
+
+    <div class="featured-section">
+        <h2>Featured Blends</h2>
+        <div class="blends-grid">
+            <div class="blend-card">
+                 <div class="bag-placeholder">
+                     <div class="bag-label"></div>
+                 </div>
+            </div>
+            <div class="blend-card">
+                 <div class="bag-placeholder">
+                     <div class="bag-label"></div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 60px;"></div>
+
+    <div class="return-bar">
+        <span>Live HTML Prototype — Brixo Designs Portfolio</span>
+        <a href="coffeehouse.html">Exit Demo</a>
+    </div>
+
+</body>
+</html>

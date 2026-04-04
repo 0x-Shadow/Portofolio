@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Brixo Designs. Request a free quote for your custom website design and development project.">
+    <title>Contact — Brixo Designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo.png" alt="Brixo Designs Logo">
+            <span>Brixo <small class="brand-sub">Designs</small></span>
+        </a>
+        <div class="mobile-menu-btn" id="menuBtn">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#process">Process</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html" class="nav-cta">Get a Quote</a>
+            <a href="contact-el.html" class="lang-switch">ΕΛ</a>
+        </div>
+    </nav>
+
+    <div class="contact-page">
+        <div class="contact-grid">
+
+            <!-- LEFT: FORM -->
+            <div class="contact-form-wrap reveal">
+                <div class="badge" style="margin-bottom:20px;"><i class="fas fa-envelope"></i> Get In Touch</div>
+                <h1>Let's Talk About Your Website</h1>
+                <p class="sub">Send us a quick message below and we'll get back to you within 24 hours. No pressure, just a chat.</p>
+
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="john@business.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+30 XXX XXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help? *</label>
+                        <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you need..." required></textarea>
+                    </div>
+
+                    <!-- Honeypot (anti-spam) -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:16px;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <p id="form-success" style="display:none; color:#10B981; text-align:center; margin-top:16px; font-weight:600;"><i class="fas fa-check-circle"></i> Message sent! I'll reply within 24 hours.</p>
+                </form>
+            </div>
+
+            <!-- RIGHT: INFO -->
+            <div class="contact-side reveal" style="transition-delay:150ms;">
+                <h3>Other Ways to Reach Me</h3>
+
+                <a href="mailto:hello@brixodesigns.com" class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <strong>Email</strong>
+                        <span>hello@brixodesigns.com</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/+306938831376" target="_blank" class="contact-info-item">
+                    <div class="contact-info-icon" style="background:rgba(37,211,102,0.1); border-color:rgba(37,211,102,0.2); color:#25D366;"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <span>Chat directly — fast response</span>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" class="contact-info-item">
+                    <div class="contact-info-icon" style="background:rgba(10,102,194,0.1); border-color:rgba(10,102,194,0.2); color:#0a66c2;"><i class="fab fa-linkedin-in"></i></div>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <span>Connect professionally</span>
+                    </div>
+                </a>
+
+                <div style="margin-top:20px; background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(16,185,129,0.05)); border:1px solid rgba(59,130,246,0.2); border-radius:12px; padding:22px; text-align:center;">
+                    <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:6px;">Average response time</p>
+                    <p style="font-family:'Outfit',sans-serif; font-size:2rem; font-weight:800; background:var(--gradient); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">&lt; 12 hours</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem;">
+                    <img src="assets/logo.png" alt="Brixo Designs Logo">
+                    <span>Brixo <small class="brand-sub">Designs</small></span>
+                </a>
+                <p>Modern web design & development for local businesses worldwide. Based in Greece. Available globally.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/0x-Shadow" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/+306938831376" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Business Websites</a>
+                <a href="#">E-Commerce Stores</a>
+                <a href="#">Landing Pages</a>
+                <a href="#">UI/UX Design</a>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html#work">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get In Touch</h4>
+                <a href="mailto:hello@brixodesigns.com"><i class="fas fa-envelope"></i> hello@brixodesigns.com</a>
+                <a href="https://wa.me/+306938831376" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brixo Designs. All rights reserved.</p>
+            <p>Built with <i class="fas fa-bolt" style="color:var(--primary);"></i> from Greece</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Form success handler
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+                btn.disabled = true;
+
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { Accept: 'application/json' }
+                    });
+                    if (res.ok) {
+                        form.reset();
+                        document.getElementById('form-success').style.display = 'block';
+                        btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+                    } else {
+                        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Request';
+                        btn.disabled = false;
+                        alert('Something went wrong — please try emailing directly.');
+                    }
+                } catch {
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Request';
+                    btn.disabled = false;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
